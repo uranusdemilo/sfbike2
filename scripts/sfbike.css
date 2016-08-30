@@ -1,0 +1,36 @@
+#headerIcon{
+	font-weight:bold;
+	vertical-align:middle;
+}
+
+#headerBlock{
+	background-color:#b0e9fa;
+	color:#76130B;
+	font-size:240%;
+	font-family:tahoma;
+	font-weight:bold;
+	vertical-align:middle;
+}
+
+.leftColItem{
+	padding-left:20px;
+}
+
+#leftSidebar{
+	background-color:#b0e9fa;
+	border-right:3px solid #76130B;
+}
+#titleBlock{
+	color:#76130B;
+	text-align:center;
+	font-family:tahoma;
+	font-size:240%;
+	font-weight:bold;
+	border-top: 7px solid #76130B;
+	border-bottom: 7px solid #76130B;
+}
+
+#titleText{
+	padding-top:15px;
+	padding-bottom:15px;
+}
