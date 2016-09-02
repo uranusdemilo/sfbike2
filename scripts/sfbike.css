@@ -1,3 +1,4 @@
+
 #headerIcon{
 	font-weight:bold;
 	vertical-align:middle;
@@ -12,22 +13,72 @@
 	vertical-align:middle;
 }
 
-.leftColItem{
-	padding-left:20px;
+.leftColHeader{
+	padding-left:16px;
+	padding-top:30px;
+	font-family:tahoma;
+	font-size:20px;
+	font-weight:bold;
 }
 
 #leftSidebar{
 	background-color:#b0e9fa;
 	border-right:3px solid #76130B;
+	min-height:600px;
 }
+
+.tableMember{
+      font-family:helvetica;
+      padding-left:10px;
+      padding-right:10px;
+   }
+   
+.itemPic{
+	padding-top:20px;
+}
+
 #titleBlock{
+	border-top: 7px solid #76130B;
+	border-bottom: 7px solid #76130B;
+}
+
+#titleBlockMenu{
+	font-size:0;
+	list-style-type: none;
+	list-style:none;
+    overflow: hidden;
+    background-color: #FFFFFF;
+	text-align:center;
+	padding-top:5px;
+	margin:0;
+}
+
+#titleBlockMenu li{
+	border:1px solid #771C1C;
+	color: white;
+	display: inline;
+	font-family:Arial;
+	font-size:15px;
+    text-align: center;
+    padding: 5px;
+	color:#771C1C;
+}
+
+#titleBlockMenu a{
+	color:#771C1C;
+	text-decoration:none;
+}
+
+#titleBlockMenu li:hover{
+	background-color:#c6c6c6;
+}
+
+#titleText{
 	color:#76130B;
 	text-align:center;
 	font-family:tahoma;
 	font-size:240%;
 	font-weight:bold;
-	border-top: 7px solid #76130B;
-	border-bottom: 7px solid #76130B;
 }
 
 #titleText{

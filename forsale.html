@@ -1,26 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-<charset="UTF-8">
-<link rel="stylesheet" href="./scripts/bootstrap.min.css">
+<meta charset="UTF-8" />
 <link rel="stylesheet" type="text/css" href="./scripts/sfbike.css">
+<link rel="stylesheet" href="./scripts/bootstrap.min.css">
+<script type="text/javascript" src="scripts/angular.min.js"></script>
+<script type="text/javascript" src="controllers/listForSaleController.js"></script>
+<!--<script type="text/javascript" src="directives/listForSaleDirective.js"></script>-->
 </head>
 <body>
 <div id='headerBlock'>
 	<img id='headerIcon' src='images/logo.png'></img> SF Bike Rescue
 </div>
 <div id='titleBlock'>
-	<div id="titleText">
-		Rescued Bicycle Marketplace
+	<div>
+		<div id="titleText">
+			Rescued Bicycle Marketplace
+		</div>
+		<div><ul id="titleBlockMenu">
+			<li><a href="http://sfbikerescue.com">HOME</a></li>
+			<li><a href="http://sfbikerescue.com/category/rescues/">RESCUES</a></li>
+			<li><a href="http://www.sfbikerescue.com/category/bike-art/">BIKE ART</a></li>
+			<li><a href="http://www.sfbikerescue.com/category/bike-recovery-services/">BIKE RECOVER SERVCES</a></li>
+			<li><a href="http://www.sfbikerescue.com/category/about-us/">ABOUT US</a></li>
+			<li><a href="http://www.sfbikerescue.com/category/contact/">CONTACT</a></li>
+			<li><a href="http://www.sfbikerescue.com/category/blog/">BLOG</a></li>
+			<li><a href="http://www.sfbikerescue.com/category/donations/" >DONATIONS</a></li>
+		</div>
+			
 	</div>
 </div>
 <div class="row">
 	<div class = "col-sm-2">
       <div id="leftSidebar">
-		<div class="leftColItem">Item One</div>
-		<div class="leftColItem">Item Two</div>
-		<div class="leftColItem">Item Three</div>
-		<div class="leftColItem">Item Four</div>
+		<div class="leftColHeader">Pages</div>
+			<ul>
+				<li class="leftColItem">About Us</li>
+				<li class="leftColItem">Blog</li>
+				<li class="leftColItem">Contact</li>
+				<li class="leftColItem">Fave Bike Builds</li>
+				<li class="leftColItem">Home</li>
+			</ul>
+		<div class="leftColHeader">Recent Posts</div>
+			<ul>
+				<li class="leftColItem">Bike Blenders</li>
+				<li class="leftColItem">Things Built Using Bikes</li>
+				<li class="leftColItem">Bikes I Miss Already</li>
+				<li class="leftColItem">Donations</li>
+				<li class="leftColItem">Stolen Bikes in SF</li>
+			</ul>
+			<div class="leftColHeader">Recent Comments</div>
+			<div class="leftColHeader">Media RSS</div>
+		</div>
+	</div>
+	<div class="col-sm-8">
+		<div ng-app="forSaleApp" ng-controller="forSaleController">
+			<table>
+				<tr ng-repeat="bike in bikes">
+					<!--Start Directive-->
+					<td>
+						<table>
+							<td class='tableMember'>{{ bike.bikenum }}</td>
+							<tr><td class='tableMember'>{{ bike.biketitle }}</td></tr>
+							<tr><td class='tableMember'>{{ bike.biketype }}</td></tr>
+							<tr><td class='tableMember'>${{ bike.bikeprice }}</td></tr>
+							<tr><td class='tableMember'><a href="displaybike.php?id= {{ bike.bikenum }}">Click for more info</a></td></tr>
+						</table>
+					</td>
+					<td>
+						<img ng-src ="{{'bikeImages/bike-' + bike.bikenum + '-0.jpg'}}" height="120" class="itemPic"></td>
+					</td>
+					<!--End Directive-->
+					<!--<list-directive></list-directive>-->
+				</tr>
+			</table>
+		</div>
 	</div>
 </div>
 </body>
