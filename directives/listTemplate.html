@@ -1,12 +1,14 @@
-<td>
-	<table>
-		<tr><td class='tableMember'>{{ bike.bikenum }}</td></tr>
-		<tr><td class='tableMember'>{{ bike.biketitle }}</td></tr>
-		<tr><td class='tableMember'>{{ bike.biketype }}</td></tr>
-		<tr><td class='tableMember'>${{ bike.bikeprice }}</td></tr>
-		<tr><td class='tableMember'><a href="displaybike.php?id= {{ bike.bikenum }}">Click for more info</a></td></tr>
-	</table>
-</td>
-<td>
-	<img ng-src ="{{'sfbike2/bikeImages/bike-' + bike.bikenum + '-0.jpg'}}" height="120" class="itemPic"></td>
-</td>
+<table>
+	<tr><td>
+		<table class="forSaleLeftList"> 
+			<tr><td class='tableMember'>{{ bike.bikenum }}</td></tr>
+			<tr><td class='tableMember'>{{ bike.biketitle }}</td></tr>
+			<tr><td class='tableMember'>{{ bike.biketype }}</td></tr>
+			<tr><td class='tableMember'>${{ bike.bikeprice }}</td></tr>
+			<tr><td class='tableMember'><a href="displaybike.php?id= {{ bike.bikenum }}">Click for more info</a></td></tr>
+		</table>
+	</td>
+	<td>
+		<img ng-src ="{{'/sfbike2/bikeImages/bike-' + bike.bikenum + '-0.jpg'}}" height="120" class="itemPic"></td>
+	</td></tr>
+</table>
