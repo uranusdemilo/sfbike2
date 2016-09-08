@@ -7,3 +7,14 @@ app.controller('forSaleController',function($scope, $http){
       .then(function(response){$scope.bikes = response.data.bikes;});
    };
 });
+
+app.directive("listDirective", function() {
+	var linkFunction = function(scope, element, attributes) {
+    scope.bikeIndex = attributes["listDirective"];
+  };
+    return {
+		restrict:'EA',
+        templateUrl: 'scripts/listTemplate.html',
+      link: linkFunction
+    };
+}); 
